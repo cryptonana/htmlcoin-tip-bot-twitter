@@ -4,23 +4,23 @@ twitter:
     access_token_key: ''
     access_token_secret: ''
     twittername: ''
-    twitterkeyword: 'twitcoin'
+    twitterkeyword: 'htmlcoin'
 log:
   file: tipbot.log
 rpc:
   host: localhost
-  port: 38301
-  user: twitcoinrpc
+  port: 4888
+  user: htmlcoinrpc
   pass: pass
   prefix: ''
 coin:
-  withdrawal_fee: 1
-  min_withdraw: 5
-  min_confirmations: 5
-  min_tip: 10
+  withdrawal_fee: .01
+  min_withdraw: 1
+  min_confirmations: 6
+  min_tip: 1
   min_rain: 1
-  short_name: ' TWIT'
-  full_name: twitcoin 
+  short_name: ' HTML'
+  full_name: htmlcoin 
 webadmin:
   enabled: false
   port: 8080
