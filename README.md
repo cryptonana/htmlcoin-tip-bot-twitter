@@ -6,7 +6,7 @@ It uses [node-htmlcoin](https://github.com/denuoweb/node-htmlcoin) for integrati
 # Instalation
 To install node-tip-bot simply clone this repo and install dependencies:
 ```bash
-git clone https://github.com/twitrocks/htmlcoin-tip-bot-twitter
+git clone https://github.com/denuoweb/htmlcoin-tip-bot-twitter
 cd htmlcoin-tip-bot-twitter
 npm install
 ```
