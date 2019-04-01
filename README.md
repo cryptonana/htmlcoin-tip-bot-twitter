@@ -3,7 +3,7 @@
 It is forked off uneks IRC node-tip-bot (https://github.com/unek/node-tip-bot)
 It uses [node-htmlcoin](https://github.com/denuoweb/node-htmlcoin) for integration with Htmlcoin's JSON RPC API.
 
-# Instalation
+# Installation
 To install node-tip-bot simply clone this repo and install dependencies:
 ```bash
 git clone https://github.com/denuoweb/htmlcoin-tip-bot-twitter
