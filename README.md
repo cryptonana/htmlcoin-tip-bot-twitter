@@ -1,13 +1,13 @@
-# node-tip-bot-twitter is an open-source node.js twitter bot for tipping with twitcoin.
+# htmlcoin-tip-bot-twitter is an open-source node.js twitter bot for tipping with Htmlcoin.
 
 It is forked off uneks IRC node-tip-bot (https://github.com/unek/node-tip-bot)
-It uses [node-twitcoin](https://github.com/twitrocks/node-twitcoin) for integration with your coin's JSON RPC API.
+It uses [node-htmlcoin](https://github.com/denuoweb/node-htmlcoin) for integration with Htmlcoin's JSON RPC API.
 
 # Instalation
 To install node-tip-bot simply clone this repo and install dependencies:
 ```bash
-git clone https://github.com/twitrocks/node-tip-bot-twitter
-cd node-tip-bot-twitter
+git clone https://github.com/twitrocks/htmlcoin-tip-bot-twitter
+cd htmlcoin-tip-bot-twitter
 npm install
 ```
 After installation proceed to the configuration.
@@ -29,7 +29,7 @@ Logging settings.
 ## rpc
 JSON RPC API connection info.
 * **host** - JSON RPC API hostname
-* **port** - API port (by default 22555 for twitcoin)
+* **port** - API port
 * **user** - API username
 * **pass** - API password (keep that secure)
 
@@ -39,11 +39,11 @@ Basic coin settings.
 * **min_withdraw** - minimum amount of coins to withdraw
 * **min_confirmations** - minimum amount of confirmations needed to tip/withdraw coins
 * **min_tip** - minimum amount of coins to tip
-* **short_name** - short coin's name (eg. `TWIT`)
-* **full_name** - full coin's name (eg. `twitcoin`)
+* **short_name** - short coin's name (eg. `HTML`)
+* **full_name** - full coin's name (eg. `htmlcoin`)
 
 # How to run it?
-Before running the bot, you have to be running your coin daemon with JSON-RPC API enabled. To enable, add this to your coin daemon configuration file (eg. `~/.twitcoin/twitcoin.conf`):
+Before running the bot, you have to be running your coin daemon with JSON-RPC API enabled. To enable, add this to your coin daemon configuration file (eg. `~/.htmlcoin/htmlcoin.conf`):
 ```ini
 server=1
 daemon=1
