@@ -2,7 +2,7 @@
     var winston = require('winston'),
             fs = require('fs'),
             yaml = require('js-yaml'),
-            coin = require('node-twitcoin');
+            coin = require('node-htmlcoin');
     
     var Twitter = require('twitter');
     // check if the config file exists
@@ -21,7 +21,7 @@ if(!fs.existsSync('./config/config.yml')) {
             level: 'debug'});
     }
     // connect to coin json-rpc
-    winston.info('Connecting to coind...');
+    winston.info('Connecting to htmlcoind...');
     var coin = coin({
         host: settings.rpc.host,
         port: settings.rpc.port,
@@ -142,7 +142,7 @@ if(!fs.existsSync('./config/config.yml')) {
                     console.log('tip');
                     console.log(match[0] + ',' + match[1] + ',' + match[2] + ',' + match[3] + ',' + match[4] + ',' + match[5] + ',' + match[6] + ',' + match[7] + ',' + match[8]);
                     if (match == null || match.length < 3) {
-                        replytweet(from, replyid, 'Usage: nameofbot tip <twitterhandle> <amount>')
+                        replytweet(from, replyid, 'Usage: htmlcointipbot tip <twitterhandle> <amount>')
                         return;
                     }
                     var to = match[6];
