@@ -3,8 +3,8 @@ twitter:
     consumer_secret: ''
     access_token_key: ''
     access_token_secret: ''
-    twittername: ''
-    twitterkeyword: 'htmlcoin'
+    twittername: 'Htmlcoin Tip Bot'
+    twitterkeyword: 'htmlcointipbot'
 log:
   file: tipbot.log
 rpc:
@@ -30,22 +30,22 @@ webadmin:
 commands:
   help:
     pm: true
-    channel: false
+    channel: true
   tip:
     pm: true
     channel: true
   balance:
     pm: true
-    channel: false
+    channel: true
   withdraw:
     pm: true
-    channel: false
+    channel: true
   address:
     pm: true
-    channel: false
+    channel: true
   terms:
     pm: true
-    channel: false
+    channel: true
   rain:
     pm: false
     channel: true
@@ -54,7 +54,7 @@ messages:
   error: 'Sorry %name%, something went wrong.'
   no_funds: "Sorry %name%, you don't have enough funds (you're %short%%short_name% short)"
   not_identified: '%name%: You need to be identified with NickServ to tip.'
-  tipped: '%from% tipped %to% %amount%%short_name%! "tweet %nick% help" to claim.'
+  tipped: '%from% tipped %to% %amount%%short_name%! "tweet %nick% help" to participate.'
   balance: '%name% has %balance%%short_name%.'
   balance_unconfirmed: '%name% has %balance%%short_name% (unconfirmed: %unconfirmed%%short_name%)'
   deposit_address: Your deposit address %address%
@@ -69,11 +69,11 @@ messages:
     - 'Transaction %transaction% completed.'
   help:
     - 'You can use following commands:'
-    - 'balance - displays your current wallet balance'
-    - 'address - displays %full_name%  your depositaddress'
-    - 'withdraw <%full_name% address> - withdraws your whole wallet balance to specified address (minus %withdrawal_fee%%short_name% withdrawal fee)'
-    - 'tip <nick> <amount> - sends the specified amount of %full_name% to nickname'
-    - 'terms - displays terms and conditions for using %nick%'
+    - '@HtmlcoinTipBot balance - displays your current wallet balance'
+    - '@HtmlcoinTipBot address - displays %full_name%  your deposit address'
+    - '@HtmlcoinTipBot withdraw <%full_name% address> - withdraws your entire wallet balance (minus %withdrawal_fee%%short_name% withdrawal fee)'
+    - '@HtmlcoinTipBot tip <nick> <amount> - sends the specified amount of %full_name% to nickname'
+    - '@HtmlcoinTipBot terms - displays terms and conditions for using %nick%'
   terms:
     - 'There are no fees to use %nick%, with the exception of %withdrawal_fee%%short_name% fee on withdrawals.'
     - 'In no event shall %nick% be responsible in the event of lost, stolen or misdirected funds.'
