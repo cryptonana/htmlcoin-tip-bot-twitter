@@ -142,7 +142,7 @@ if(!fs.existsSync('./config/config.yml')) {
                     console.log('tip');
                     console.log(match[0] + ',' + match[1] + ',' + match[2] + ',' + match[3] + ',' + match[4] + ',' + match[5] + ',' + match[6] + ',' + match[7] + ',' + match[8]);
                     if (match == null || match.length < 3) {
-                        replytweet(from, replyid, 'Usage: htmlcointipbot tip <twitterhandle> <amount>')
+                        replytweet(from, replyid, 'Usage: @HtmlcoinTipBot tip <twitterhandle> <amount>')
                         return;
                     }
                     var to = match[6];
@@ -173,7 +173,7 @@ if(!fs.existsSync('./config/config.yml')) {
                     coin.getBalance(settings.rpc.prefix + from.toLowerCase(), settings.coin.min_confirmations, function (err, balance) {
                         if (err) {
                             locks[from.toLowerCase()] = null;
-                            winston.error('Error in !tip command.', err);
+                            winston.error('Error in tip command.', err);
      
                             replytweet(from, replyid, settings.messages.error.expand({name: from}));
                             return;
@@ -183,7 +183,7 @@ if(!fs.existsSync('./config/config.yml')) {
                             coin.send('move', settings.rpc.prefix + from.toLowerCase(), settings.rpc.prefix + to.toLowerCase(), amount, function (err, reply) {
                                 locks[from.toLowerCase()] = null;
                                 if (err || !reply) {
-                                    winston.error('Error in !tip command', err);
+                                    winston.error('Error in tip command', err);
                                     replytweet(from, replyid, settings.messages.error.expand({name: from}));
                                     return;
                                 }
@@ -202,7 +202,7 @@ if(!fs.existsSync('./config/config.yml')) {
                     var user = from.toLowerCase();
                     getAddress(user, function (err, address) {
                         if (err) {
-                            winston.error('Error in !address command', err);
+                            winston.error('Error in address command', err);
                             replytweet(from, replyid, settings.messages.error.expand({name: from}));
                             return;
                         }
@@ -214,14 +214,14 @@ if(!fs.existsSync('./config/config.yml')) {
                     var user = from.toLowerCase();
                     coin.getBalance(settings.rpc.prefix + user, settings.coin.min_confirmations, function (err, balance) {
                         if (err) {
-                            winston.error('Error in !balance command', err);
+                            winston.error('Error in balance command', err);
                             replytweet(from, replyid, settings.messages.error.expand({name: from}));
                             return;
                         }
                         var balance = typeof (balance) == 'object' ? balance.result : balance;
                         coin.getBalance(settings.rpc.prefix + user, 0, function (err, unconfirmed_balance) {
                             if (err) {
-                                winston.error('Error in !balance command', err);
+                                winston.error('Error in balance command', err);
                                 replytweet(from, replyid, settings.messages.balance.expand({balance: balance, name: user}));
                                 return;
                             }
@@ -235,20 +235,20 @@ if(!fs.existsSync('./config/config.yml')) {
                     var user = from.toLowerCase();
                     var match = message.match(/.?withdraw (\S+)$/);
                     if (match == null) {
-                        replytweet(from, replyid, 'Usage: !withdraw <' + settings.coin.full_name + ' address>');
+                        replytweet(from, replyid, 'Usage: @HtmlcoinTipBot withdraw <' + settings.coin.full_name + ' address>');
                         return;
                     }
                     var address = match[1];
                     coin.validateAddress(address, function (err, reply) {
                         if (err) {
-                            winston.error('Error in !withdraw command', err);
+                            winston.error('Error in withdraw command', err);
                             replytweet(from, replyid, settings.messages.error.expand({name: from}));
                             return;
                         }
                         if (reply.isvalid) {
                             coin.getBalance(settings.rpc.prefix + from.toLowerCase(), settings.coin.min_confirmations, function (err, balance) {
                                 if (err) {
-                                    winston.error('Error in !withdraw command', err);
+                                    winston.error('Error in withdraw command', err);
                                     replytweet(from, replyid, settings.messages.error.expand({name: from}));
                                     return;
                                 }
@@ -260,7 +260,7 @@ if(!fs.existsSync('./config/config.yml')) {
                                 }
                                 coin.sendFrom(settings.rpc.prefix + from.toLowerCase(), address, balance - settings.coin.withdrawal_fee, function (err, reply) {
                                     if (err) {
-                                        winston.error('Error in !withdraw command', err);
+                                        winston.error('Error in withdraw command', err);
                                         replytweet(from, replyid, settings.messages.error.expand({name: from}));
                                         return;
                                     }
