@@ -68,7 +68,7 @@ messages:
     - 'You have been charged %withdrawal_fee%%short_name% withdrawal fee.'
     - 'Transaction %transaction% completed.'
   help:
-    - 'You can use following commands:'
+    - 'You can use following commands. If Twitter states Tweet already sent, add 4 characters to end of command.'
     - '@HtmlcoinTipBot balance - displays your current wallet balance'
     - '@HtmlcoinTipBot address - displays %full_name%  your deposit address'
     - '@HtmlcoinTipBot withdraw <%full_name% address> - withdraws your entire wallet balance (minus %withdrawal_fee%%short_name% withdrawal fee)'
