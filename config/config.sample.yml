@@ -68,12 +68,12 @@ messages:
     - 'You have been charged %withdrawal_fee%%short_name% withdrawal fee.'
     - 'Transaction %transaction% completed.'
   help:
-    - 'You can use following commands. If Twitter states Tweet already sent, add 4 characters to end of command.'
-    - '@HtmlcoinTipBot balance - displays your current wallet balance'
-    - '@HtmlcoinTipBot address - displays %full_name%  your deposit address'
-    - '@HtmlcoinTipBot withdraw <%full_name% address> - withdraws your entire wallet balance (minus %withdrawal_fee%%short_name% withdrawal fee)'
-    - '@HtmlcoinTipBot tip <nick> <amount> - sends the specified amount of %full_name% to nickname'
-    - '@HtmlcoinTipBot terms - displays terms and conditions for using %nick%'
+    - 'Tag HtmlcoinTipBot and use following commands. If Twitter states Tweet already sent, add 5 characters to end of tweet like so ->'
+    - 'HtmlcoinTipBot balance - displays your current wallet balance'
+    - 'HtmlcoinTipBot address - displays %full_name%  your deposit address'
+    - 'HtmlcoinTipBot withdraw <%full_name% address> - withdraws your entire wallet balance (minus %withdrawal_fee%%short_name% withdrawal fee)'
+    - 'HtmlcoinTipBot tip <nick> <amount> - sends the specified amount of %full_name% to nickname'
+    - 'HtmlcoinTipBot terms - displays terms and conditions for using %nick%'
   terms:
     - 'There are no fees to use %nick%, with the exception of %withdrawal_fee%%short_name% fee on withdrawals.'
     - 'In no event shall %nick% be responsible in the event of lost, stolen or misdirected funds.'
